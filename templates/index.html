@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <title>JOBS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        .nav-item:hover{
+            background-color: skyblue;
+
+            border-radius: 5px;
+        }
+        .nav-item:hover > a{
+            color: white !important;
+        }
+        .divv {
+    text-align:right;
+}
+    </style>
+</head>
+
+<body>
+
+<section class="content-wrapper">
+                        <div class="content content--unpadded">
+                            {% for job in jobs %}
+
+
+                            <div class="jobCard row" data-action="click->clickable#open" data-clickable-target="_blank"
+                                data-clickable-url="/art-director-design-at-procore-4" data-controller="clickable">
+                                <div class="jobCard__details col-12">
+                                <img src='{{ job.thumbnail_img }}'>
+
+                                    <br>
+                                    <div class="jobCard__details__ultra col-8">
+
+                                       <a class=""
+                                            href="{% url 'scraped:job_details' id=job.id %}">{{ job.title }}</a>
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {% endfor %}
+
+
+                        </div>
+                    </section>
+                    <div class="pagination col-12 col-sm-4 justify-content-center">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                  {% if jobs.has_previous %}
+                    <li class="page-item ">
+                      <a class="page-link btn btn-active btn-primary" href="?page=1" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item "><a class="page-link btn btn-active btn-primary" href="?page={{ jobs.previous_page_number }}">{{ jobs.previous_page_number }}</a></li>
+                  {% endif %}
+                  <li class="page-item "><div class="current page-link">{{ jobs.number }}</div></li>
+
+                  {% if jobs.has_next %}
+                    <li class="page-item "><a class="page-link btn btn-active btn-primary" href="?page={{ jobs.next_page_number }}">{{ jobs.next_page_number}}</a></li>
+                    {% if jobs.next_page_number != jobs.paginator.num_pages %}
+                        <li class="page-item ">
+                          <a class="page-link btn btn-active btn-primary" href="?page={{ jobs.paginator.num_pages }}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                    {% endif %}
+                  {% endif %}
+              </ul>
+            </nav>
+        </div>
+
+
+</body>
+
+</html>
