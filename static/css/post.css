@@ -1,0 +1,145 @@
+
+.headerNav {
+    display: flex;
+    justify-content: space-between;
+    padding: .8em 1em;
+    width: 100%;
+    z-index: 3;
+    background-color: #fff;
+    height: 4em;
+    font-smoothing: subpixel-antialiased;
+    transition: transform ease 100ms;
+}
+.Nav{
+    display: flex;
+    justify-content: flex-start;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+}
+ul.navjustify-content-center {
+    display: flex;
+    margin-right: 18em;
+}
+a.nav-link-primary {
+    padding: 3px;
+    display: block;
+    border: 1px #000fff solid;
+    border-radius: 5em;
+    background-color: #000fff;
+    color: #fff;
+}
+a{
+    color: #000000;
+}
+.navjustify-content-end{
+    display: flex;
+    justify-content: flex-end;
+}
+.headerNav__link--primary>a:link{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: .6rem .9rem;
+    border-color: #0d51ff;
+    background-color: #0d51ff;
+    color: #fff;
+    border-radius: 3em;
+}
+img {
+    width: 15%;
+    height: 0%;
+}
+.collectionStackIcon {
+    position: relative;
+    display: inline-block;
+    height: 3em;
+    margin-left: -4.5em;
+    transform: rotate(-30deg) translateY(45px);
+}
+.productHeader .productHeader__logo {
+    margin-bottom: 2em;
+}
+.collectionStackIcon__layer:nth-child(1) {
+    left: 0;
+    background-color: #01ded6;
+    }
+.collectionStackIcon__layer:nth-child(2) {
+    left: .75em;
+    background-color: #01a2d0;
+    animation-delay: .2s;
+}
+.collectionStackIcon__layer:nth-child(3) {
+    left: 1.5em;
+    background-color: #0172dd;
+    animation-delay: .4s;
+}
+.collectionStackIcon__layer:nth-child(4) {
+    left: 2.25em;
+    background-color: #0037e1;
+}
+.collectionStackIcon__layer {
+    border-radius: .3em;
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    transition: transform .1s ease-in-out;
+    padding: .2em;
+    animation: dropIn .5s reverse;
+}
+.collectionStackIcon__layer .collectionStackIcon__layer__icon__square {
+    display: inline-block;
+    background-color: #031a56;
+    width: .7em;
+    height: .7em;
+}
+.collectionStackIcon__layer .collectionStackIcon__layer__icon__circle {
+    display: inline-block;
+    background-color: #fff;
+    width: .7em;
+    height: .7em;
+    border-radius: 1em;
+}
+ .collectionStackIcon__layer__icon {
+    color: #fff;
+    width: 1.3em;
+    height: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.collectionStackIcon__layer .collectionStackIcon__layer__icon__triangle::after {
+    content: "";
+    display: block;
+    border-style: solid;
+    height: 0;
+    width: 0;
+    border-color: transparent transparent #00ffe5;
+    border-width: 0 .35em .6em;
+}
+.collectionStackIcon__layer .collectionStackIcon__layer__icon__heart {
+    height: .2em;
+    width: .7em;
+    background-color: #00a1ff;
+}
+.productHeader {
+    text-align: center;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    font-size: 1.3em;
+    /* width: 25em; */
+    margin: 2em auto 4em;
+}
+.tag {
+    display: inline-block;
+    background-color: #f2f5fa;
+    color: #1b51cf;
+    padding: .5rem .6rem;
+    border-radius: .3rem;
+    margin-bottom: 3px;
+    font-size: 12px;
+}

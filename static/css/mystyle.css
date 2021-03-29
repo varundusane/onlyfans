@@ -1,0 +1,281 @@
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 17%;
+    margin: 0em .5em;
+}
+.container{
+	    max-width:100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+   .container_section{
+    max-width:1200px;
+    
+}
+.wizard {
+    max-width: 800px;
+    margin: 0 auto 5em;
+}
+.inlineHeader {
+    width: 75%;
+    font-size: 37px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+h1.inlineHeader_title {
+    display: inline;
+    color: #0000ff;
+    font-weight: 600;
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+ 
+h2.inlineHeader_subtitles{
+    display: inline;
+    font-weight: 400;
+}
+.wizard__section {
+    border-radius: .4rem;
+    padding: 2rem;
+    background-color: #f3f6ff;
+        width: 100%;
+}
+
+.form--expanded label {
+    display: block;
+    margin-bottom: .5em;
+    font-size: .9em;
+    color: #04184d;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-weight: 700;
+}
+label.string.required {
+    font-size: .4em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+input#post_title {
+    display: inherit;
+width: 100%;
+    font-size: 15px;
+    padding: .5em;
+    background: #fff;
+    border: 1px #ccc solid;
+    border-radius: 2px;
+    color: #000;
+    box-shadow: 0 0 0 2px rgba(13,81,255,.1);
+    border: none;
+}
+.input.radio_buttons.optional.post_commitment.radio_buttons--inline {
+    margin-top: 2em;
+    font-size: .4em;
+}
+span.radio {
+    text-transform: uppercase;
+    margin-right: 2em;
+    font-weight: 700;
+    font-size: .9em;
+}
+input#post_commitment_full-time {
+    margin-right: 1em;
+}
+input#post_commitment_part-time {
+    margin-right: 1em;
+}
+input#post_commitment_Internship{
+    margin-right: 1em;
+}
+input#post_commitment_Contractor{
+    margin-right: 1em;
+}
+.input.boolean.optional.post_remote {
+    font-size: .8rem;
+    margin: 0em;
+}
+label.boolean.optional.checkbox {
+    margin-top: 1em;
+    display: block;
+    margin-bottom: .5em;
+    font-size: .9em;
+    color: #04184d;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-weight: 700;
+}
+input#post_remote {
+    margin-right: 1em;
+}
+
+.input.string.optional.post_location_str.field_with_hint {
+    margin-top: 1em;
+}
+label.string.optional {
+    display: block;
+    margin-bottom: .5em;
+     font-size: .8em; 
+    color: #04184d;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-weight: 700;
+}
+input#post_location_str{
+    width: 100%;
+    font-size: 15px;
+    padding: .5em;
+    background: #fff;
+    border: 1px #ccc solid;
+    border-radius: 2px;
+    color: #000;
+    box-shadow: 0 0 0 2px rgba(13,81,255,.1);
+    border: none;
+}
+span.hint {
+    display: block;
+    font-size: .5em;
+    margin-top: .3em;
+    color: rgba(7,41,128,.5);
+        margin-bottom: 1.5rem;
+}
+.editor
+        {
+            padding: 20px;
+            min-height:200px;
+        }
+
+        .sample-toolbar
+        {
+            background:#f4f4f4;
+            padding: 5px;
+            border-radius:3px;
+        }
+        a {
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: #000;
+}
+
+        .sample-toolbar > span
+        {
+            cursor:pointer;
+        }
+
+        .sample-toolbar > span:hover
+        {
+            text-decoration:underline;
+        }
+        .input.url.optional.post_url.field_with_hint {
+    font-size: .7em;
+    font-weight: 700;
+    margin-top: 2em;
+    display: grid;
+}
+.form-group {
+    display: grid;
+}
+label.string.required {
+    font-size: .4em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+input#post_company_attributes_name {
+    font-size: 15px;
+}
+input#post_company_attributes_website_url {
+    font-size: 15px;
+}
+label.url.optional {
+    font-size: 15px;
+}
+input#post_url {
+    font-size: 15px;
+}
+label {
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.optional checkbox
+ {
+    margin-top: 1em;
+    display: block;
+    margin-bottom: .5em;
+    font-size: .8em;
+    color: #04184d;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-weight: 700;
+}
+
+label.boolean.optional.checkbox{
+    margin-top: 1em;
+    display: block;
+    margin-bottom: .5em;
+    font-size: .5em;
+    color: #04184d;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-weight: 700;
+    border: 1px solid #e6e6cf;
+    background-color: #e6e6cf;
+}
+input#post_addon_remoteok {
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
+.post_automatically_renew.field_with_hint.checkbox--highlighted {
+    font-size: .9em;
+}
+label.email.optional {
+    font-size: .8em;
+    font-weight: 700;
+    text-transform: uppercase;;
+}
+input#post_stripe_email {
+    font-size: 20px;
+    width: 100%;
+}
+.input.email.optional.post_stripe_email.field_with_hint {
+    display: grid;
+    margin-top: 1.2rem;
+}
+.input{
+     font-size: .4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+}
+
+.button2Bar {
+  display: flex;
+    justify-content: center;
+    align-content: center;
+}
+button.button2 {
+    display: flex;
+    border-radius: .2em;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    background-color: #0d51ff;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
