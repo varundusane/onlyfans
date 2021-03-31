@@ -7,10 +7,18 @@ import os
 from bs4 import BeautifulSoup
 
 from apscheduler.schedulers.background import BackgroundScheduler
-from django_q.tasks import schedule
+
 
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+    
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Referer": "https://www.google.com/",
+        "DNT": "1",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1"}
 
 
 def weworkSrcipe():
@@ -264,7 +272,7 @@ def Command():
 
 
 
-def run_continuously(self, interval=10):
+def run_continuously(self, interval=100):
     """Continuously run, while executing pending jobs at each elapsed
     time interval.
     @return cease_continuous_run: threading.Event which can be set to
@@ -298,7 +306,7 @@ BackgroundScheduler.run_continuously = run_continuously
 def start_scheduler():
     print("hi")
     scheduler = BackgroundScheduler()
-    scheduler.add_job(Command, 'interval', minutes=1)
+    scheduler.add_job(Command, 'interval', minutes=10)
     scheduler.start()
     # schedule.every(1).minutes.do(Command)
     #
